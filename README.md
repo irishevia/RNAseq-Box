@@ -40,8 +40,8 @@ Vidal EA, Moyano TC, Krouk G, Katari MS, Tanurdzic M, McCombie WR, Coruzzi GM, G
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/irishevia/RNA-SeqBox.git
-    cd RNA-SeqBox
+    git clone https://github.com/irishevia/RNAseq-box.git
+    cd RNAseq-box
     ```
 
 2. **Build the Docker image**:
