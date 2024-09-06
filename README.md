@@ -59,7 +59,7 @@ Vidal EA, Moyano TC, Krouk G, Katari MS, Tanurdzic M, McCombie WR, Coruzzi GM, G
 3. **Run the pipeline**: Use Docker to execute the Snakemake workflow:
 
     ```bash
-    docker run -v $(pwd):/data -w /data rna-seq-box snakemake --cores 4
+    docker run -it -v $(pwd):/data -w /data rna-seq-box \ snakemake
     ```
 
 ## Input Files
