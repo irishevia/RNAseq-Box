@@ -1,0 +1,16 @@
+samples:
+  - SRR671946
+  - SRR671947
+  - SRR671948
+  - SRR671949
+
+reference_genome: data/reference/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
+annotation_gtf: data/reference/Arabidopsis_thaliana.TAIR10.59.gtf.gz
+
+# Paths to data and output directories
+raw_data_dir: data/raw/
+trimmed_data_dir: data/trimmed/
+aligned_data_dir: data/aligned/
+reference_data_dir: data/reference/
+counts_dir: data/counts/
+results_dir: results/
