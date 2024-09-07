@@ -20,9 +20,9 @@ COUNTS_DIR = config["counts_dir"]
 REFERENCE_GENOME = config["reference_genome"]
 ANNOTATION_GTF = config["annotation_gtf"]
 
-# Ensure the results directory exists
+# Ensure the results directory exist and open directory permissions
 os.makedirs(RESULTS_DIR, exist_ok=True)
-os.chmod(RESULTS_DIR, 0o777)  # Open directory permissions
+os.chmod(RESULTS_DIR, 0o777)
 os.umask(0o000)
 
 rule all:
@@ -39,7 +39,7 @@ rule fastqc:
     shell:
         """
         fastqc -o {RESULTS_DIR} {input}
-        rm -f {RESULTS_DIR}{wildcards.sample}_fastqc.html  # Delete the HTML file
+        rm -f {RESULTS_DIR}{wildcards.sample}_fastqc.html
         chmod 777 {output} 
         """
 
@@ -93,7 +93,7 @@ rule samtools_sort:
     input:
         ALIGNED_DIR + "{sample}.sam"
     output:
-        temp(ALIGNED_DIR + "{sample}.sorted.bam")  # Make BAM file temp
+        temp(ALIGNED_DIR + "{sample}.sorted.bam")
     shell:
         "samtools sort {input} -o {output}"
 
